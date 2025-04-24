@@ -28,13 +28,13 @@ CREATE TABLE netflix
     description  VARCHAR(550)
 );
 
-select * from netflix;
+select * from netflix; --Analysing table
 
-select count(*) from netflix;
+select count(*) from netflix; --Analysing total data
 
-select distinct type from netflix;
+select distinct type from netflix; --Analysing distinct types
 
-select count(show_id) from netflix;
+select count(show_id) from netflix; --Analysing shows
 ```
 
 ## Business Problems and Solutions
@@ -147,8 +147,7 @@ GROUP BY 1
 ORDER BY 2 DESC;
 ```
 
-### 10.Find each year and the average numbers of content release in India on netflix.
-return top 5 year with highest avg content release!
+### 10.Find each year and the average numbers of content release in India on netflix,return top 5 year with highest avg content release!
 ```sql
 SELECT 
 EXTRACT (year FROM to_date(date_added,'Month DD, YYYY')) on_netflix,
